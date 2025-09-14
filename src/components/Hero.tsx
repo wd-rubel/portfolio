@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Code, Palette, Zap } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import developerHero from "@/assets/developer-hero.jpg";
 
 const Hero = () => {
   const scrollToProjects = () => {
@@ -28,25 +29,42 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center space-y-8 max-w-4xl mx-auto px-6">
-        <div className="space-y-4 animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold">
-            <span className="gradient-text">Creative</span>{" "}
-            <span className="text-foreground">Developer</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Crafting beautiful, responsive web experiences with modern technologies
-            and thoughtful design.
-          </p>
-        </div>
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Text Content */}
+          <div className="space-y-8 animate-fade-in">
+            <div className="space-y-4">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
+                <span className="gradient-text">Creative</span>{" "}
+                <span className="text-foreground">Developer</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                Crafting beautiful, responsive web experiences with modern technologies
+                and thoughtful design.
+              </p>
+            </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          <Button size="lg" className="bg-gradient-primary hover:glow-effect smooth-transition px-8">
-            View My Work
-          </Button>
-          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground smooth-transition px-8">
-            Get In Touch
-          </Button>
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <Button size="lg" className="bg-gradient-primary hover:glow-effect smooth-transition px-8">
+                View My Work
+              </Button>
+              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground smooth-transition px-8">
+                Get In Touch
+              </Button>
+            </div>
+          </div>
+
+          {/* Hero Image */}
+          <div className="relative animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-primary rounded-full blur-3xl opacity-30 animate-glow-pulse"></div>
+              <img 
+                src={developerHero}
+                alt="Professional Developer"
+                className="relative z-10 w-full max-w-md mx-auto rounded-full shadow-card-custom hover:glow-effect smooth-transition"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Scroll Indicator */}
