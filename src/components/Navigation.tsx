@@ -7,9 +7,7 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -22,70 +20,59 @@ const Navigation = () => {
   ];
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
     setIsOpen(false);
   };
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-glass-border' : 'bg-transparent'
+      isScrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border shadow-sm' : 'bg-transparent'
     }`}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="text-xl font-bold">
-            <span className="gradient-text">WebDev</span>
+          <div className="text-xl font-black tracking-tight">
+            <span className="gradient-text">dev.</span>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary smooth-transition relative group"
+                className="text-sm font-semibold text-muted-foreground hover:text-foreground smooth-transition"
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full smooth-transition" />
               </button>
             ))}
-            <Button 
-              size="sm" 
-              className="bg-gradient-primary hover:glow-effect smooth-transition"
+            <Button
+              size="sm"
+              className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-6 font-semibold"
               onClick={() => scrollToSection('#contact')}
             >
               Hire Me
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
+          <Button variant="ghost" size="sm" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 glass-card mt-2 rounded-lg animate-fade-in">
-            <div className="flex flex-col space-y-4 px-4">
+          <div className="md:hidden py-4 bg-background/95 backdrop-blur-lg mt-2 rounded-xl border border-border animate-fade-in">
+            <div className="flex flex-col space-y-3 px-4">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left text-foreground hover:text-primary smooth-transition py-2"
+                  className="text-left text-foreground hover:text-primary smooth-transition py-2 font-medium"
                 >
                   {item.name}
                 </button>
               ))}
-              <Button 
-                size="sm" 
-                className="bg-gradient-primary hover:glow-effect smooth-transition mt-4"
+              <Button
+                size="sm"
+                className="bg-foreground text-background rounded-full font-semibold mt-2"
                 onClick={() => scrollToSection('#contact')}
               >
                 Hire Me
