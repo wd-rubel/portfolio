@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -7,24 +6,9 @@ import { Mail, MapPin, Phone, Github, Linkedin, Twitter } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
-    {
-      icon: Mail,
-      title: "Email",
-      details: "hello@webdev.com",
-      link: "mailto:hello@webdev.com"
-    },
-    {
-      icon: Phone,
-      title: "Phone",
-      details: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
-    },
-    {
-      icon: MapPin,
-      title: "Location",
-      details: "San Francisco, CA",
-      link: "#"
-    }
+    { icon: Mail, title: "Email", details: "hello@webdev.com", link: "mailto:hello@webdev.com" },
+    { icon: Phone, title: "Phone", details: "+1 (555) 123-4567", link: "tel:+15551234567" },
+    { icon: MapPin, title: "Location", details: "San Francisco, CA", link: "#" }
   ];
 
   const socialLinks = [
@@ -34,86 +18,60 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6">
+    <section id="contact" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Get In <span className="gradient-text">Touch</span>
+        <div className="text-center mb-20 animate-fade-in">
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">Contact</p>
+          <h2 className="text-4xl md:text-5xl font-black mb-6">
+            Let's <span className="gradient-text italic">Talk</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to bring your ideas to life? Let's discuss your project 
-            and create something amazing together.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Got a project in mind? Let's build something great together.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <Card className="glass-card animate-fade-in">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
-                    <Input 
-                      id="name" 
-                      placeholder="Your name"
-                      className="bg-glass-bg border-glass-border focus:border-primary"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input 
-                      id="email" 
-                      type="email" 
-                      placeholder="your@email.com"
-                      className="bg-glass-bg border-glass-border focus:border-primary"
-                    />
-                  </div>
+        <div className="grid lg:grid-cols-2 gap-14">
+          {/* Form */}
+          <div className="bg-card border border-border rounded-2xl p-8 animate-fade-in">
+            <h3 className="text-2xl font-bold mb-6 font-sans">Send a Message</h3>
+            <form className="space-y-5">
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name" className="font-semibold text-sm">Name</Label>
+                  <Input id="name" placeholder="Your name" className="rounded-xl bg-background border-border focus:border-primary" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input 
-                    id="subject" 
-                    placeholder="Project discussion"
-                    className="bg-glass-bg border-glass-border focus:border-primary"
-                  />
+                  <Label htmlFor="email" className="font-semibold text-sm">Email</Label>
+                  <Input id="email" type="email" placeholder="your@email.com" className="rounded-xl bg-background border-border focus:border-primary" />
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Tell me about your project..."
-                    rows={5}
-                    className="bg-glass-bg border-glass-border focus:border-primary resize-none"
-                  />
-                </div>
-                <Button 
-                  type="submit" 
-                  className="w-full bg-gradient-primary hover:glow-effect smooth-transition"
-                  size="lg"
-                >
-                  Send Message
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="subject" className="font-semibold text-sm">Subject</Label>
+                <Input id="subject" placeholder="Project discussion" className="rounded-xl bg-background border-border focus:border-primary" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="message" className="font-semibold text-sm">Message</Label>
+                <Textarea id="message" placeholder="Tell me about your project..." rows={5} className="rounded-xl bg-background border-border focus:border-primary resize-none" />
+              </div>
+              <Button type="submit" className="w-full bg-gradient-primary text-primary-foreground rounded-full font-semibold hover:shadow-lg smooth-transition" size="lg">
+                Send Message
+              </Button>
+            </form>
+          </div>
 
-          {/* Contact Info */}
+          {/* Info */}
           <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-              <div className="space-y-4">
-                {contactInfo.map((info, index) => (
-                  <a
-                    key={info.title}
-                    href={info.link}
-                    className="flex items-center gap-4 p-4 glass-card hover:glow-effect smooth-transition group"
-                  >
-                    <info.icon className="h-6 w-6 text-primary group-hover:text-accent smooth-transition" />
+              <h3 className="text-2xl font-bold mb-6 font-sans">Contact Info</h3>
+              <div className="space-y-3">
+                {contactInfo.map((info) => (
+                  <a key={info.title} href={info.link} className="flex items-center gap-4 p-4 bg-card border border-border rounded-xl hover:border-primary/30 hover:shadow-md smooth-transition group">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 smooth-transition">
+                      <info.icon className="h-5 w-5 text-primary" />
+                    </div>
                     <div>
-                      <p className="font-medium">{info.title}</p>
-                      <p className="text-muted-foreground">{info.details}</p>
+                      <p className="font-semibold text-sm">{info.title}</p>
+                      <p className="text-muted-foreground text-sm">{info.details}</p>
                     </div>
                   </a>
                 ))}
@@ -121,26 +79,20 @@ const Contact = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Follow Me</h3>
-              <div className="flex gap-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    className="flex items-center justify-center w-12 h-12 glass-card hover:glow-effect hover:bg-primary hover:text-primary-foreground smooth-transition group"
-                    aria-label={social.label}
-                  >
-                    <social.icon className="h-5 w-5" />
+              <h3 className="text-2xl font-bold mb-5 font-sans">Follow Me</h3>
+              <div className="flex gap-3">
+                {socialLinks.map((social) => (
+                  <a key={social.label} href={social.href} className="w-11 h-11 rounded-xl bg-card border border-border flex items-center justify-center hover:bg-foreground hover:text-background hover:border-foreground smooth-transition" aria-label={social.label}>
+                    <social.icon className="h-4 w-4" />
                   </a>
                 ))}
               </div>
             </div>
 
-            <div className="p-6 glass-card">
-              <h4 className="font-semibold mb-2">Let's collaborate!</h4>
-              <p className="text-muted-foreground">
-                I'm always open to discussing new opportunities, 
-                interesting projects, and creative ideas.
+            <div className="p-6 rounded-2xl bg-accent/10 border border-accent/20">
+              <h4 className="font-bold font-sans mb-2">Let's collaborate!</h4>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Always open to new opportunities, creative ideas, and exciting projects.
               </p>
             </div>
           </div>
