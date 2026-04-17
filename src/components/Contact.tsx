@@ -1,20 +1,16 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Phone, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, Phone, Github, Linkedin, Facebook } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
-    { icon: Mail, title: "Email", details: "hello@webdev.com", link: "mailto:hello@webdev.com" },
-    { icon: Phone, title: "Phone", details: "+1 (555) 123-4567", link: "tel:+15551234567" },
-    { icon: MapPin, title: "Location", details: "San Francisco, CA", link: "#" }
+    { icon: Mail, title: "Email", details: "webdev.rubel@gmail.com", link: "mailto:webdev.rubel@gmail.com" },
+    { icon: Phone, title: "Phone", details: "+8801996491709", link: "tel:+8801996491709" },
+    { icon: MapPin, title: "Location", details: "Dhaka, Bangladesh", link: "#" }
   ];
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" }
+    { icon: Github, href: "https://github.com/wd-rubel", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/wd-rubel/", label: "LinkedIn" },
+    { icon: Facebook, href: "https://www.facebook.com/rxrubel.kushtia/", label: "Facebook" }
   ];
 
   return (
@@ -31,32 +27,17 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-14">
-          {/* Form */}
-          <div className="bg-card border border-border rounded-2xl p-8 animate-fade-in">
-            <h3 className="text-2xl font-bold mb-6 font-sans">Send a Message</h3>
-            <form className="space-y-5">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="font-semibold text-sm">Name</Label>
-                  <Input id="name" placeholder="Your name" className="rounded-xl bg-background border-border focus:border-primary" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="font-semibold text-sm">Email</Label>
-                  <Input id="email" type="email" placeholder="your@email.com" className="rounded-xl bg-background border-border focus:border-primary" />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="subject" className="font-semibold text-sm">Subject</Label>
-                <Input id="subject" placeholder="Project discussion" className="rounded-xl bg-background border-border focus:border-primary" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="message" className="font-semibold text-sm">Message</Label>
-                <Textarea id="message" placeholder="Tell me about your project..." rows={5} className="rounded-xl bg-background border-border focus:border-primary resize-none" />
-              </div>
-              <Button type="submit" className="w-full bg-gradient-primary text-primary-foreground rounded-full font-semibold hover:shadow-lg smooth-transition" size="lg">
-                Send Message
-              </Button>
-            </form>
+          {/* Map */}
+          <div className="bg-card border border-border rounded-2xl p-2 animate-fade-in overflow-hidden h-[400px] lg:h-auto min-h-[400px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7301.994831236799!2d90.41876784265457!3d23.783106364592065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79705d8041d%3A0xe1bf95ab3b06a96f!2sUttar%20Badda%2C%20Dhaka%201212!5e0!3m2!1sen!2sbd!4v1776424137427!5m2!1sen!2sbd"
+              width="100%"
+              height="100%"
+              style={{ border: 0, borderRadius: "0.75rem", minHeight: "400px" }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
 
           {/* Info */}

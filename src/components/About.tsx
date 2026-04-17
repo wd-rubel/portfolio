@@ -3,8 +3,7 @@ import { Code2, Palette, Rocket, Users } from "lucide-react";
 
 const About = () => {
   const skills = [
-    "React", "TypeScript", "Next.js", "Node.js", "Python", "Tailwind CSS",
-    "PostgreSQL", "MongoDB", "AWS", "Docker", "Git", "Figma"
+    "WordPress", "PHP", "React", "TypeScript", "Next.js", "Node.js", "Tailwind CSS", "MongoDB", "AWS", "Docker", "Git", "Figma"
   ];
 
   const features = [
@@ -23,8 +22,7 @@ const About = () => {
             About <span className="gradient-text italic">Me</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            5+ years turning complex problems into simple, elegant web solutions.
-            I care about clean code, great UX, and shipping on time.
+            5+ years experience in WordPress Plugin and Theme Development. I have a strong understanding of PHP, React, and other web development technologies.
           </p>
         </div>
 

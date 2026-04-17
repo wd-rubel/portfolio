@@ -1,36 +1,57 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, CodeXml } from "lucide-react";
+
+import easyHotelImg from "@/assets/plugins/easy-hotel.png";
+import rtMegaMenuImg from "@/assets/plugins/rt-mega-menu.png";
+import easyWishlistImg from "@/assets/plugins/easy-wishlist.png";
+import easyCurrencyImg from "@/assets/plugins/easy-currency.png";
+import easyMenuIconsImg from "@/assets/plugins/easy-menu-icons.png";
+import boldPostImg from "@/assets/plugins/boldpost.png";
 
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack shop with auth, cart, Stripe payments, and an admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "#", live: "#"
+      title: "Easy Hotel",
+      description: "Easy Hotel Booking is an all-in-one hotel reservation solution for WordPress.",
+      image: easyHotelImg,
+      tech: ["WordPress Plugin", "PHP", "React", "Tailwind CSS"],
+      github: "https://wordpress.org/plugins/easy-hotel/", live: "https://themewant.com/downloads/easy-hotel-booking/"
     },
     {
-      title: "Task Management App",
-      description: "Collaborative project board with real-time sync, drag-and-drop, and team chat.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=400&fit=crop",
-      tech: ["Next.js", "TypeScript", "Prisma", "Socket.io"],
-      github: "#", live: "#"
+      title: "RT Mega Menu",
+      description: "RT Mega Menu is a powerful and easy-to-use WordPress mega menu builder plugin.",
+      image: rtMegaMenuImg,
+      tech: ["WordPress Plugin", "PHP", "React", "Tailwind CSS"],
+      github: "https://wordpress.org/plugins/rt-mega-menu/", live: "https://rtmega.themewant.com/"
     },
     {
-      title: "Weather Dashboard",
-      description: "Location-aware forecasts with interactive charts and animated weather maps.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=400&fit=crop",
-      tech: ["React", "Tailwind", "OpenWeather API", "Chart.js"],
-      github: "#", live: "#"
+      title: "Easy Wishlist",
+      description: "Easy Wishlist is a powerful and easy-to-use WordPress wishlist plugin.",
+      image: easyWishlistImg,
+      tech: ["WordPress Plugin", "PHP", "React", "Tailwind CSS"],
+      github: "https://wordpress.org/plugins/easy-wishlist/", live: "https://wishlist.themewant.com/"
     },
     {
-      title: "Portfolio Website",
-      description: "This very site — responsive, fast, and animated for a great first impression.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
-      tech: ["React", "Tailwind", "Framer Motion", "Vite"],
-      github: "#", live: "#"
+      title: "Easy Currency",
+      description: "Easy Currency Switcher is a free WooCommerce multi-currency plugin.",
+      image: easyCurrencyImg,
+      tech: ["WordPress Plugin", "PHP", "React", "Tailwind CSS"],
+      github: "https://wordpress.org/plugins/easy-currency/", live: "https://easy-currency.themewant.com/"
+    },
+    {
+      title: "Easy Menu Icons",
+      description: "Easy Menu Icons is a versatile and user-friendly plugin that enhances your WordPress menus with icon support.",
+      image: easyMenuIconsImg,
+      tech: ["WordPress Plugin", "PHP", "React", "Tailwind CSS"],
+      github: "https://wordpress.org/plugins/easy-menu-icons/", live: "https://themewant.com/menuicon/"
+    },
+    {
+      title: "BoldPost",
+      description: "BoldPost is a modern Gutenberg post grid and layout plugin that helps you display blog posts in beautiful grids, lists, sliders, and category showcases.",
+      image: boldPostImg,
+      tech: ["WordPress Plugin", "PHP", "React", "Tailwind CSS"],
+      github: "https://wordpress.org/plugins/boldpost/", live: "https://boldpost.themewant.com/"
     }
   ];
 
@@ -58,7 +79,7 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-52 object-cover group-hover:scale-105 smooth-transition"
+                  className="w-full h-72 object-cover group-hover:scale-105 smooth-transition"
                 />
               </div>
               <div className="p-6 space-y-4">
@@ -73,7 +94,7 @@ const Projects = () => {
                 </div>
                 <div className="flex gap-3 pt-2">
                   <Button variant="outline" size="sm" className="rounded-full gap-2 text-xs font-semibold border-border hover:border-foreground">
-                    <Github className="h-3.5 w-3.5" /> Code
+                    <CodeXml className="h-3.5 w-3.5" /> Code
                   </Button>
                   <Button size="sm" className="rounded-full gap-2 text-xs font-semibold bg-foreground text-background hover:bg-foreground/90">
                     <ExternalLink className="h-3.5 w-3.5" /> Live Demo
@@ -82,12 +103,6 @@ const Projects = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-14 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          <Button variant="outline" size="lg" className="rounded-full border-2 border-foreground/15 font-semibold hover:bg-foreground hover:text-background smooth-transition">
-            View All Projects
-          </Button>
         </div>
       </div>
     </section>

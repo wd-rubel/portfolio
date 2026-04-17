@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Sparkles, Star, Circle } from "lucide-react";
-import developerHero from "@/assets/developer-hero.jpg";
+import developerHero from "@/assets/developer-hero.png";
 
 const Hero = () => {
   const scrollToProjects = () => {
