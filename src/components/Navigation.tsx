@@ -31,7 +31,7 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <div className="text-xl font-black tracking-tight">
-            <span className="gradient-text">dev.</span>
+            <span className="gradient-text">rubel.</span>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
