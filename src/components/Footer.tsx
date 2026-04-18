@@ -52,16 +52,16 @@ const Footer = () => {
             <div className="space-y-2 text-sm text-muted-foreground">
               <p>webdev.rubel@gmail.com</p>
               <p>+8801996491709</p>
-              <p>Kushtia, Bangladesh</p>
+              <p>Uttar Badda, Dhaka 1212, Bangladesh</p>
             </div>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground text-xs">© {currentYear} dev. All rights reserved.</p>
+            <p className="text-muted-foreground text-xs">© {currentYear} rubel. All rights reserved.</p>
             <p className="text-muted-foreground text-xs flex items-center gap-1">
-              Made with <Heart className="h-3 w-3 text-primary" /> using React & Tailwind CSS
+              Made by Rubel
             </p>
           </div>
         </div>

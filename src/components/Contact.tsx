@@ -4,7 +4,7 @@ const Contact = () => {
   const contactInfo = [
     { icon: Mail, title: "Email", details: "webdev.rubel@gmail.com", link: "mailto:webdev.rubel@gmail.com" },
     { icon: Phone, title: "Phone", details: "+8801996491709", link: "tel:+8801996491709" },
-    { icon: MapPin, title: "Location", details: "Dhaka, Bangladesh", link: "#" }
+    { icon: MapPin, title: "Location", details: "Uttar Badda, Dhaka 1212, Bangladesh", link: "#" }
   ];
 
   const socialLinks = [
