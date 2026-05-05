@@ -4,7 +4,7 @@ const Contact = () => {
   const contactInfo = [
     { icon: Mail, title: "Email", details: "webdev.rubel@gmail.com", link: "mailto:webdev.rubel@gmail.com" },
     { icon: Phone, title: "Phone", details: "+8801996491709", link: "tel:+8801996491709" },
-    { icon: MapPin, title: "Location", details: "Uttar Badda, Dhaka 1212, Bangladesh", link: "#" }
+    { icon: MapPin, title: "Location", details: "Harinaraynpur, Kushtia, Khulna, Bangladesh", link: "#" }
   ];
 
   const socialLinks = [
@@ -30,7 +30,7 @@ const Contact = () => {
           {/* Map */}
           <div className="bg-card border border-border rounded-2xl p-2 animate-fade-in overflow-hidden h-[400px] lg:h-auto min-h-[400px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7301.994831236799!2d90.41876784265457!3d23.783106364592065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79705d8041d%3A0xe1bf95ab3b06a96f!2sUttar%20Badda%2C%20Dhaka%201212!5e0!3m2!1sen!2sbd!4v1776424137427!5m2!1sen!2sbd"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14606.507694410036!2d89.12661901267458!3d23.760679847558407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39feeb2cbaa7e379%3A0x1de398cb6baa3f63!2sHarinarayanpur!5e0!3m2!1sen!2sbd!4v1777942368276!5m2!1sen!2sbd"
               width="100%"
               height="100%"
               style={{ border: 0, borderRadius: "0.75rem", minHeight: "400px" }}

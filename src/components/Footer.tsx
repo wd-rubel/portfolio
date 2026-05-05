@@ -52,7 +52,7 @@ const Footer = () => {
             <div className="space-y-2 text-sm text-muted-foreground">
               <p>webdev.rubel@gmail.com</p>
               <p>+8801996491709</p>
-              <p>Uttar Badda, Dhaka 1212, Bangladesh</p>
+              <p>Harinaraynpur, Kushtia, Khulna, Bangladesh</p>
             </div>
           </div>
         </div>
