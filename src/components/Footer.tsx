@@ -4,7 +4,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const socialLinks = [
     { icon: Github, href: "https://github.com/wd-rubel", label: "GitHub" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/wd-rubel/", label: "LinkedIn" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/developer-rubel/", label: "LinkedIn" },
     { icon: Facebook, href: "https://www.facebook.com/rxrubel.kushtia/", label: "Facebook" }
   ];
   const quickLinks = [
