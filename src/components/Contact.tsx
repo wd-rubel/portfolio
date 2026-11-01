@@ -2,7 +2,7 @@ import { Mail, MapPin, Phone, Github, Linkedin, Facebook } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
-    { icon: Mail, title: "Email", details: "webdev.rubel@gmail.com", link: "mailto:webdev.rubel@gmail.com" },
+    { icon: Mail, title: "Email", details: "rubel.webdev@gmail.com", link: "mailto:rubel.webdev@gmail.com" },
     { icon: Phone, title: "Phone", details: "+8801996491709", link: "tel:+8801996491709" },
     { icon: MapPin, title: "Location", details: "Harinaraynpur, Kushtia, Khulna, Bangladesh", link: "#" }
   ];

@@ -50,7 +50,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-sm font-bold uppercase tracking-widest text-foreground">Get In Touch</h3>
             <div className="space-y-2 text-sm text-muted-foreground">
-              <p>webdev.rubel@gmail.com</p>
+              <p>rubel.webdev@gmail.com</p>
               <p>+8801996491709</p>
               <p>Harinaraynpur, Kushtia, Khulna, Bangladesh</p>
             </div>
